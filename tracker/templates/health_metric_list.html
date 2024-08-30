@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Metrics</title>
+</head>
+<body>
+    <h1>Your Health Metrics</h1>
+    <ul>
+        {% for metric in metrics %}
+            <li>{{ metric.date }} - Weight: {{ metric.weight }} kg, Height: {{ metric.height }} cm, Exercise: {{ metric.exercise_minutes }} min, Calories Consumed: {{ metric.calories_consumed }}, Calories Burned: {{ metric.calories_burned }}, Water Intake: {{ metric.water_intake }} L</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

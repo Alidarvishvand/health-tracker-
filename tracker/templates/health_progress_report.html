@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Progress Report</title>
+</head>
+<body>
+    <h1>Your Health Progress Report</h1>
+    <p>Average Weight: {{ weight_progress }} kg</p>
+    <p>Total Exercise: {{ total_exercise }} minutes</p>
+    <p>Total Calories Consumed: {{ total_calories_consumed }}</p>
+    {% comment %} <p>Total Calories Burned: {{ total_calories_burned }}</p> {% endcomment %}
+    <h2>Goals</h2>
+    <ul>
+        {% for goal in goals %}
+            <li>{{ goal.goal_type }}: Target {{ goal.target_value }}, Current {{ goal.current_value }} - from {{ goal.start_date }} to {{ goal.end_date }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

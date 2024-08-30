@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Health Goals</title>
+</head>
+<body>
+    <h1>Your Health Goals</h1>
+    <ul>
+        {% for goal in goals %}
+            <li>{{ goal.goal_type }}: Target {{ goal.target_value }}, Current {{ goal.current_value }} - from {{ goal.start_date }} to {{ goal.end_date }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
